@@ -1,38 +1,55 @@
-.App {
-  text-align: center;
+/* src/App.css */
+
+/* Importing the Roboto font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Body styles */
+body {
+  font-family: 'Roboto', Arial, sans-serif; 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, #F8F8F8, #2d8883, #05300ebb); 
+  background-size: 200% 200%; /* Enlarges the gradient for smoother movement */
+  animation: iridescent 25s ease infinite; /* Slower animation for gentle shifting */
+  color: #0a0a0a; /* Default text color for better contrast */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flex-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center; /* Align items to the left */
+  gap: 40px; /* Reduced gap to tighten the space between items */
+}
+
+
+
+body.dark-mode header {
+  background-color: #1e1e1e; /* Dark background for header in dark mode */
+}
+
+nav ul {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  list-style-type: none;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
   color: white;
+  text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
+body.dark-mode nav ul li a {
+  color: #f1f1f1; /* Lighter color for links in dark mode */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body.dark-mode nav ul li a:hover {
+  color: #80cbc4; /* Highlight color for links in dark mode */
 }
+

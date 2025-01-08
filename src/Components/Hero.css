@@ -1,0 +1,63 @@
+/* src/Components/Hero.css */
+
+.hero {
+  position: relative; /* Allows absolutely positioned children */
+  height: 100vh; /* Full viewport height */
+  width: 100%; /* Full width */
+  display: flex; /* Enable flexbox */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  color: white; /* Change text color for visibility */
+  text-align: center; /* Center align text */
+  overflow: hidden; /* Hide any overflow */
+  padding: 0;
+  margin: 0;
+
+  /* Background Image Settings */
+  background-size: cover; /* Ensure the image covers the entire hero section */
+  background-position: center center; /* Position the image to stay centered */
+  background-repeat: no-repeat; /* Prevent tiling of the image */
+}
+
+.hero-text {
+  position: relative; /* This ensures the text stays on top of the image */
+  z-index: 1; /* Bring text to the front */
+  padding: 20px; /* Add some padding */
+  border-radius: 10px; /* Rounded corners for the text box */
+  color: white; /* Set the text color to white */
+}
+
+.hero-text h2 {
+  font-size: 3rem; /* Adjust this value for larger text */
+  color: white; /* Set the text color to white */
+}
+
+.hero-text p {
+  font-size: 2.4rem; /* Adjust this value for larger text */
+  opacity: 0; /* Start fully transparent */
+  animation: fadeIn 2s forwards; /* Apply the fadeIn animation */
+  color: white; /* Set the text color to white */
+}
+
+/* Apply animation delay to the second <p> tag */
+.hero-text p:nth-of-type(2) {
+  animation-delay: 1.5s; /* Delay the second <p> by 0.5 seconds */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1; /* Fade to fully visible */
+  }
+}
+
+/* Hero overlay */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Add a dark overlay for the background */
+  z-index: 0; /* Ensures the overlay is below the text and above the background image */
+}

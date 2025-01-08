@@ -1,0 +1,28 @@
+footer {
+    background-color: #121212;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: relative;  /* Use relative so it stays with the content flow */
+    margin-top: 0; /* Make sure the footer is directly below content */
+}
+
+footer p {
+    color: white;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+footer a {
+    color: #99ddd9;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #8ac9c5;
+    text-decoration: underline;
+}
